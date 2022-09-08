@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'mvn package -f pom.xml'
             }
-        }
+       }
          
       stage('Deploy Code In Tomcat Dev Server-1') {
             steps {
