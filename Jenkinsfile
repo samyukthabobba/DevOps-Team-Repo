@@ -13,7 +13,7 @@ pipeline {
             }
        }
          
-      stage('Deploy Code In Tomcat Dev Server-1') {
+      stage('Deploy Code In Tomcat Dev Server') {
             steps {
                sh 'cp target/*.war /home/jenkins/apache-tomcat-8.5.82/webapps'
             }
