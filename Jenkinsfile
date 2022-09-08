@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Git Clone') {
+        stage('Git Cloning') {
             steps {
                 git 'https://github.com/samyukthabobba/Development-Team-Repo.git'
             }
