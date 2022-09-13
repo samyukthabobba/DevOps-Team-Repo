@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Pushing to artifactory'){
        steps {
-        nexusArtifactUploader artifacts: [[artifactId: 'web', classifier: '', file: 'web*.war', type: 'war']], credentialsId: 'nexususer', groupId: 'project', nexusUrl: '44.202.254.159:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'releases', version: '1.7'
+        nexusArtifactUploader artifacts: [[artifactId: 'web', classifier: '', file: 'target/web*.war', type: 'war']], credentialsId: 'nexususer', groupId: 'project', nexusUrl: '44.202.254.159:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'releases', version: '1.7'
        }     
         }
         stage('Download artifact'){
